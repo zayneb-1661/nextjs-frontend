@@ -1,26 +1,34 @@
+// Importing necessary libraries and components
 'use client'; 
 import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import axios from 'axios'; 
 
+// Defining the Table component
 const Table = () => {
+  // State for storing users data
   const [users, setUsers] = useState([]);
+  // State for pagination options
   const [rowsPerPageOptions, setRowsPerPageOptions] = useState([5, 10, 15, 20]);
+  // State for search query
   const [search, setSearch] = useState('');
+  // State for storing filtered users based on search
   const [filteredUsers, setFilteredUsers] = useState([]);
 
-  // Fetch data
+  // Fetching users data on component mount
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Requesting users data from the API
         const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+        // Setting users data to state
         setUsers(response.data);
-        setFilteredUsers(response.data); // Initialize filteredUsers with the fetched data
-
-        // Dynamically create pagination options
+        setFilteredUsers(response.data); 
+        // Dynamically setting pagination options based on data length
         const options = Array.from({ length: response.data.length - 1 }, (_, i) => i + 2);
         setRowsPerPageOptions(options);
       } catch (error) {
+        // Logging error in case of failure
         console.error('Error fetching data:', error);
       }
     };
@@ -28,7 +36,7 @@ const Table = () => {
     fetchData(); 
   }, []);
 
-
+  // Filtering users based on search query
   useEffect(() => {
     const result = users.filter(user => {
       return user.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -39,6 +47,7 @@ const Table = () => {
     setFilteredUsers(result);
   }, [search, users]);
 
+  // Defining columns for DataTable
   const columns = [
     {
       name: 'ID',
@@ -67,6 +76,7 @@ const Table = () => {
     }
   ];
   
+  // Rendering the DataTable component with props
   return (
     <div className="container">
       <DataTable 
@@ -91,5 +101,6 @@ const Table = () => {
     </div>
   );
 };
+
 
 export default Table;
