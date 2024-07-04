@@ -20,7 +20,7 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository**
 
     ```sh
-    git clone <repository_url>
+    git clone https://github.com/zayneb-1661/nextjs-frontend.git
     cd nextjs-frontend
     ```
 
