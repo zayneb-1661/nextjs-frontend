@@ -38,9 +38,9 @@ To run the project locally, use the following commands:
 
  **Start the development server**
 
-    ```sh
+
     npm run dev
-    ```
+
 
     
     This will start the development server, and you can view the project at `http://localhost:3000`.
