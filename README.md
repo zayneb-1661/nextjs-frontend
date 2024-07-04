@@ -3,7 +3,7 @@
 # a simple table with dump users data with sorting ,pagination and search functionalities.
 ## Overview
 
-This is a Next.js frontend project that includes various dependencies such as `axios`, `bootstrap`, `chart.js`, `react-data-table-component`, and more.
+This is a Next.js frontend project that includes various dependencies such as `axios`, `bootstrap`,  `react-data-table-component`, and more.
 
 ## Getting Started
 
@@ -56,7 +56,6 @@ This project includes the following dependencies:
 - `isomorphic-unfetch`
 - `next`
 - `react`
-- `react-chartjs-2`
 - `react-data-table-component`
 - `react-dom`
 - `react-table`
