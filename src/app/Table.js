@@ -94,9 +94,34 @@ const Table = () => {
             placeholder="Search" 
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            style={{ marginLeft: '10px', padding: '5px', width: '300px' }}
+            className="form-control mb-3"
+            style={{ maxWidth: '300px' }}
           />
         }
+
+        customStyles={{
+          rows: {
+            style: {
+              minHeight: '72px', 
+            },
+          },
+          headCells: {
+            style: {
+              paddingLeft: '8px', 
+              paddingRight: '8px',
+              backgroundColor: '#f8f9fa', 
+              color: '#212529', 
+              fontWeight: 'bold',
+            },
+          },
+          cells: {
+            style: {
+              paddingLeft: '8px', 
+              paddingRight: '8px',
+            },
+          },
+        }}
+
       />
     </div>
   );
