@@ -42,6 +42,7 @@ To run the project locally, use the following commands:
     npm run dev
     ```
 
+    
     This will start the development server, and you can view the project at `http://localhost:3000`.
 
 
@@ -52,7 +53,6 @@ This project includes the following dependencies:
 - `@next/swc-win32-x64-msvc`
 - `axios`
 - `bootstrap`
-- `chart.js`
 - `isomorphic-unfetch`
 - `next`
 - `react`
