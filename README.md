@@ -1,6 +1,6 @@
 # Next.js Frontend Project
 # Author: Zayneb Fathalli
-# a simple table with dump users data with sorting ,pagination and search functionalities.
+# A simple table with dump users' data with sorting ,pagination and search functionalities.
 ## Overview
 
 This is a Next.js frontend project that includes various dependencies such as `axios`, `bootstrap`,  `react-data-table-component`, and more.
